@@ -213,7 +213,7 @@ NTSTATUS NTAPI NewNtQueryDirectoryFile(HANDLE FileHandle, HANDLE Event, PIO_APC_
         PFILE_ID_BOTH_DIR_INFORMATION pCur = FileInformation;
         PFILE_ID_BOTH_DIR_INFORMATION pPrev = NULL;
 #elif _MSC_VER
-    if (FileInformationClass == FileIdBothDirectoryInfo)
+    if (FileInformationClass == 0x25)
     {
         PFILE_ID_BOTH_DIR_INFO pCur = FileInformation;
         PFILE_ID_BOTH_DIR_INFO pPrev = NULL;
